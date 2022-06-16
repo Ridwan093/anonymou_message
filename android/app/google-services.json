@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "989294827955",
+    "project_id": "anonymouse-messanger-3edbc",
+    "storage_bucket": "anonymouse-messanger-3edbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989294827955:android:febb9758a6bb119288d3c6",
+        "android_client_info": {
+          "package_name": "com.example.anonymouse_messages"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989294827955-bqjhm5bkhlcl1f573mllsn8mgm0c2p6b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anonymouse_messages",
+            "certificate_hash": "ac3796aa7f08b9761bdf7a9f874e2e135fca1279"
+          }
+        },
+        {
+          "client_id": "989294827955-cfhnt34hpv5qub7h26vf8e7dilp6ug37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDShCWDtDv-pnBY2FU_83o5Plx6A0KQNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989294827955-cfhnt34hpv5qub7h26vf8e7dilp6ug37.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
