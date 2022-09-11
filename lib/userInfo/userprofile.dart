@@ -206,7 +206,7 @@ class _UserprofileState extends State<Userprofile> {
                                   height: 20,
                                 ),
                                 buttonContainer(
-                                    title: 'Shear My profile',
+                                    title: 'Share My profile',
                                     color: Colors.red,
                                     icon: Icons.share,
                                     ontap: () {
@@ -216,7 +216,7 @@ class _UserprofileState extends State<Userprofile> {
                                   height: 20,
                                 ),
                                 buttonContainer(
-                                    title: ' Shear To facebook',
+                                    title: ' Share To facebook',
                                     color: Colors.blue,
                                     icon: (FontAwesomeIcons.facebookSquare),
                                     ontap: () {
@@ -229,7 +229,7 @@ class _UserprofileState extends State<Userprofile> {
                               ],
                             ),
                             buttonContainer(
-                                title: 'Shear To Whatsapp',
+                                title: 'Share To Whatsapp',
                                 color: const Color.fromARGB(255, 61, 212, 66),
                                 icon: (FontAwesomeIcons.whatsapp),
                                 ontap: () {
@@ -239,7 +239,7 @@ class _UserprofileState extends State<Userprofile> {
                               height: 10,
                             ),
                             buttonContainer(
-                                title: 'Shear To Instagram',
+                                title: 'Share To Instagram',
                                 color: Colors.red,
                                 icon: (FontAwesomeIcons.instagram),
                                 ontap: () {

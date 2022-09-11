@@ -7,7 +7,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 
+import '../../web/web_auth_methode/web_login.dart';
 import '../linergrant.dart';
+
+import 'package:anonymouse_messages/responsive/screenLayout.dart';
 
 class Authmethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -124,8 +127,7 @@ class Authmethods {
 
   Future siginout(BuildContext context) async {
     await _auth.signOut();
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: ((context) => const Loggin())));
+    const ScreenLayout(mobilescreen: Loggin(), websreen: WebLoggin());
   }
 
   Future resetpassworld(
