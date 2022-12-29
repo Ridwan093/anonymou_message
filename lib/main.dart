@@ -6,14 +6,14 @@
 
 import 'dart:async';
 
-import 'package:anonymouse_messages/loggin_service/linergrant.dart';
-import 'package:anonymouse_messages/loggin_service/logging.dart';
+import 'package:anonymouse_messages/UI_screen/auth_layout/logging.dart';
+import 'package:anonymouse_messages/common/liner_forder/linergrant.dart';
 
 import 'package:anonymouse_messages/responsive/screenLayout.dart';
-import 'package:anonymouse_messages/userInfo/userprofile.dart';
-import 'package:anonymouse_messages/web/web_auth_methode/web_login.dart';
+import 'package:anonymouse_messages/UI_screen/userInfo/userprofile.dart';
+import 'package:anonymouse_messages/web/Ul_screen/web_auth_screen/web_login.dart';
 
-import 'package:anonymouse_messages/web/webprofile.dart';
+import 'package:anonymouse_messages/web/Ul_screen/webprofile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
@@ -22,7 +22,7 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'validation_property/validator_service.dart';
+import 'firebase_method/loggin_service/validation_property/validator_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

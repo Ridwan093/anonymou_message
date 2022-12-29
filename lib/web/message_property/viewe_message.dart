@@ -1,8 +1,7 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 
-import 'package:anonymouse_messages/loggin_service/linergrant.dart';
-import 'package:anonymouse_messages/message_properties/view_items.dart';
-import 'package:anonymouse_messages/web/message_property/view_item.dart';
+import 'package:anonymouse_messages/UI_screen/message_layout/sendMessage_screen/message_body.dart';
+import 'package:anonymouse_messages/common/liner_forder/linergrant.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -32,78 +31,6 @@ class _WebViewsState extends State<WebViews> {
     setState(() {
       username = (snapshot.data() as Map<String, dynamic>)['userName'];
     });
-  }
-
-  Widget messages() {
-    return StreamBuilder<QuerySnapshot>(
-        stream: FirebaseFirestore.instance
-            .collection('post')
-            .where('username', isEqualTo: username)
-            .orderBy('Timepublise', descending: true)
-            .snapshots(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting)
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  CircularProgressIndicator(),
-                  Text('please Waite...')
-                ],
-              ),
-            );
-          if (!snapshot.hasData) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  CircularProgressIndicator(),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('please Waite...')
-                ],
-              ),
-            );
-          }
-          return snapshot.data!.docs.isNotEmpty
-              ? ListView.builder(
-                  itemCount: snapshot.data!.docs.length,
-                  itemBuilder: (context, index) {
-                    return WebViewitem(
-                        data: snapshot.data!.docs[index],
-                        parentContext: context);
-                  })
-              : Container(
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: const BorderRadius.all(Radius.circular(10)),
-                      border: Border.all(
-                        style: BorderStyle.solid,
-                        color: Colors.teal,
-                      )),
-                  child: Center(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(14.0),
-                        child: Text(
-                          " '😢oops! No one has sent you a message in last 3 days!!' "
-                          "share your profile link to your friend to recieve message ",
-                          style:
-                              TextStyle(fontSize: 16, color: Colors.grey[500]),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  )),
-                );
-        });
-    // } else {
-    //   return const Text('not woking yet! 😢');
-    // }
   }
 
   @override
@@ -170,7 +97,7 @@ class _WebViewsState extends State<WebViews> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 350, child: messages()),
+                              const SizedBox(height: 350, child: MessageBody()),
                               const SizedBox(
                                 height: 25,
                               ),

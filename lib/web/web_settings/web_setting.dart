@@ -1,5 +1,5 @@
-import 'package:anonymouse_messages/loggin_service/linergrant.dart';
-import 'package:anonymouse_messages/loggin_service/resurcese/auth_method.dart';
+import 'package:anonymouse_messages/common/liner_forder/linergrant.dart';
+import 'package:anonymouse_messages/firebase_method/loggin_service/resurcese/auth_method.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -190,7 +190,7 @@ class _Web_settingState extends State<Web_setting> {
                             ),
                             InkWell(
                               onTap: () {
-                                Authmethods().siginout(context);
+                                Authmethods().siginout(context, setState);
                               },
                               child: Material(
                                 elevation: 3.0,

@@ -1,27 +1,26 @@
 // ignore_for_file: dead_code
 
+import 'package:anonymouse_messages/common/dateFormat/dateTime_format.dart';
 import 'package:anonymouse_messages/firebase_method/message_method/Db_helper/DatabaseHelper.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../../common/dateFormat/dateTime_format.dart';
-
-class WebViewitem extends StatefulWidget {
+class Viewitem extends StatefulWidget {
   final BuildContext parentContext;
   final DocumentSnapshot data;
 
-  const WebViewitem({
+  const Viewitem({
     Key? key,
     required this.data,
     required this.parentContext,
   }) : super(key: key);
 
   @override
-  _WebViewitemState createState() => _WebViewitemState();
+  _ViewitemState createState() => _ViewitemState();
 }
 
-class _WebViewitemState extends State<WebViewitem> {
+class _ViewitemState extends State<Viewitem> {
   //teste page
 
   @override
@@ -67,29 +66,26 @@ class _WebViewitemState extends State<WebViewitem> {
                             showDialog(
                                 context: context,
                                 builder: (context) => Dialog(
-                                        child: SizedBox(
-                                      width: 120,
-                                      child: ListView(
-                                          shrinkWrap: true,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 10, vertical: 12),
-                                          children: ['Delete']
-                                              .map((e) => InkWell(
-                                                    onTap: () async {
-                                                      DbHelper().delete(postid);
-                                                      Navigator.pop(context);
-                                                    },
-                                                    child: Container(
-                                                      padding: const EdgeInsets
-                                                          .symmetric(
-                                                        vertical: 4.0,
-                                                        horizontal: 16,
-                                                      ),
-                                                      child: Text(e),
+                                    child: ListView(
+                                        shrinkWrap: true,
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 12),
+                                        children: ['Delete']
+                                            .map((e) => InkWell(
+                                                  onTap: () async {
+                                                    DbHelper().delete(postid);
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Container(
+                                                    padding: const EdgeInsets
+                                                        .symmetric(
+                                                      vertical: 12,
+                                                      horizontal: 16,
                                                     ),
-                                                  ))
-                                              .toList()),
-                                    )));
+                                                    child: Text(e),
+                                                  ),
+                                                ))
+                                            .toList())));
                           },
                           icon: const Icon(Icons.more_vert))
                     ],
