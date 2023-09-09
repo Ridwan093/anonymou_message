@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:anonymouse_messages/backEnd_connection/message_buttons/post_message_button.dart';
 
 import 'package:flutter/material.dart';
@@ -8,7 +10,7 @@ import '../../../common/liner_forder/linergrant.dart';
 
 import '../../../UI_screen/message_layout/sendMessage_screen/writing_post.dart';
 
-// ignore: camel_case_types
+
 class Web_post_message extends StatefulWidget {
   const Web_post_message({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class Web_post_message extends StatefulWidget {
   State<Web_post_message> createState() => _Web_post_messageState();
 }
 
-// ignore: camel_case_types
+
 
 bool isloding = false;
 final webmessagecontroller = TextEditingController();

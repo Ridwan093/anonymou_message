@@ -1,3 +1,7 @@
+// ignore_for_file: use_build_context_synchronously, must_be_immutable, duplicate_ignore
+
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,7 +24,7 @@ class PostMessageButton extends StatefulWidget {
 }
 
 class _PostMessageButtonState extends State<PostMessageButton> {
-  DbHelper db = DbHelper().res as DbHelper;
+  // DbHelper db = DbHelper().res as DbHelper;
   _uploadTask(BuildContext context) async {
     FirebaseAuth auth = FirebaseAuth.instance;
     if (widget.messagecontroller.text.isEmpty) {
@@ -34,12 +38,13 @@ class _PostMessageButtonState extends State<PostMessageButton> {
       String res = await DbHelper().postmessageToDatabase(
           message: widget.messagecontroller.text, username: namecontroler.text);
 
-      print(widget.messagecontroller.text.toString());
+      log(widget.messagecontroller.text.toString());
       setState(() {
         widget.isloding = false;
         islodincontainer = false;
       });
       if (res == 'success') {
+        // ignore: use_build_context_synchronously
         Apptools()
             .shoesnackbar('success 😜😜😜😜', false, context, Colors.green);
       } else {
@@ -49,6 +54,7 @@ class _PostMessageButtonState extends State<PostMessageButton> {
       messagecontroller.text = '';
 
       if (auth.currentUser?.uid == null) {
+        
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const Signup()));
         setState(() {

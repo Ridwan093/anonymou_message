@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:anonymouse_messages/UI_screen/auth_layout/sign_up.dart';
 import 'package:anonymouse_messages/firebase_method/loggin_service/validation_property/validation_items.dart';
 
@@ -71,7 +73,7 @@ class SignupValidation with ChangeNotifier {
   }
 
   void submitData() {
-    print(
+    log(
         "FirstName: ${firstName.value}, LastName: ${lastName.value}, ${DateTime.parse(dob.value.toString())}");
   }
 }

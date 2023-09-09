@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:anonymouse_messages/firebase_method/message_method/firebaseStorage_property/poste.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 

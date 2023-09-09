@@ -1,9 +1,7 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 
 import 'package:anonymouse_messages/UI_screen/message_layout/sendMessage_screen/message_body.dart';
-import 'package:anonymouse_messages/UI_screen/message_layout/view_items.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../common/liner_forder/linergrant.dart';

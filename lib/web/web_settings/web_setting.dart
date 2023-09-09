@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:anonymouse_messages/common/liner_forder/linergrant.dart';
 import 'package:anonymouse_messages/firebase_method/loggin_service/resurcese/auth_method.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

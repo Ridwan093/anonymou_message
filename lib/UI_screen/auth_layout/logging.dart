@@ -1,9 +1,9 @@
-import 'dart:developer';
+
 
 import 'package:anonymouse_messages/UI_screen/auth_layout/sign_up.dart';
 import 'package:anonymouse_messages/backEnd_connection/login_connet_button.dart';
 import 'package:anonymouse_messages/common/liner_forder/linergrant.dart';
-import 'package:anonymouse_messages/firebase_method/loggin_service/resurcese/auth_method.dart';
+
 import 'package:anonymouse_messages/common/simple_dialog/scalffodsnackbar.dart';
 
 import 'package:anonymouse_messages/firebase_method/loggin_service/textfild.dart';
@@ -16,7 +16,7 @@ import '../message_layout/sendMessage_screen/writing_post.dart';
 import '../../common/simple_dialog/alertDialoge.dart';
 import '../userInfo/userprofile.dart';
 
-import '../../web/Ul_screen/web_auth_screen/web_regester.dart';
+
 import 'forgortPassword.dart';
 
 class Loggin extends StatefulWidget {

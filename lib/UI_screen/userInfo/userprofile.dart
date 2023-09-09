@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:anonymouse_messages/common/homepage_widget/custom_container.dart';
 import 'package:anonymouse_messages/firebase_method/message_method/Db_helper/DatabaseHelper.dart';
 
@@ -13,6 +15,7 @@ import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toast/toast.dart';
+
 
 import '../../common/liner_forder/linergrant.dart';
 import '../message_layout/view_message.dart';
@@ -31,7 +34,6 @@ class Userprofile extends StatefulWidget {
 final TextEditingController emailcontroller = TextEditingController();
 
 class _UserprofileState extends State<Userprofile> {
-  String _platformVersion = 'Unknown';
 
   @override
   void initState() {
@@ -49,10 +51,11 @@ class _UserprofileState extends State<Userprofile> {
         .collection('user')
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .get();
-
-    setState(() {
-      username = (snapshot.data() as Map<String, dynamic>)['userName'];
-    });
+    if (mounted) {
+      setState(() {
+        username = (snapshot.data() as Map<String, dynamic>)['userName'];
+      });
+    }
   }
 
   initDynamicLinks() async {
@@ -204,8 +207,10 @@ class _UserprofileState extends State<Userprofile> {
                                 title: 'Share To Whatsapp',
                                 color: const Color.fromARGB(255, 61, 212, 66),
                                 icon: (FontAwesomeIcons.whatsapp),
-                                ontap: () {
-                                  ShearData().shareWatsapp();
+                                ontap: () async {
+                                  ShearData().shareOnWhatsApp();
+
+                                  // shareOnFacebook();
                                 }),
                             const SizedBox(
                               height: 10,

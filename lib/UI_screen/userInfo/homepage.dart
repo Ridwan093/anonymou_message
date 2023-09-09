@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, use_build_context_synchronously
+
 import 'package:anonymouse_messages/common/homepage_widget/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:anonymouse_messages/common/simple_dialog/scalffodsnackbar.dart';
@@ -82,6 +84,7 @@ class _HomepageState extends State<Homepage> {
     final Uri? deepLink = data?.link;
 
     if (deepLink != null) {
+      
       Navigator.pushNamed(context, '/post',
           arguments: deepLink.queryParameters['title']);
     } else if (deepLink == null) {

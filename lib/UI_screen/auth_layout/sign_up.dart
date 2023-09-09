@@ -1,19 +1,17 @@
 import 'package:anonymouse_messages/UI_screen/auth_layout/logging.dart';
 import 'package:anonymouse_messages/backEnd_connection/sign_connet_button.dart';
 
-import 'package:anonymouse_messages/firebase_method/loggin_service/resurcese/auth_method.dart';
-import 'package:anonymouse_messages/common/simple_dialog/scalffodsnackbar.dart';
+
 import 'package:anonymouse_messages/firebase_method/loggin_service/textfild.dart';
 import 'package:anonymouse_messages/UI_screen/message_layout/sendMessage_screen/writing_post.dart';
 import 'package:anonymouse_messages/suggession_card/suggession_card.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:toast/toast.dart';
 import 'package:provider/provider.dart';
 
-import '../userInfo/userprofile.dart';
+
 import '../../common/liner_forder/linergrant.dart';
 import '../../firebase_method/loggin_service/validation_property/validator_service.dart';
 
@@ -31,7 +29,6 @@ bool _isloding = false;
 FocusNode node = FocusNode();
 
 class _SignupState extends State<Signup> {
-  @override
   final bool _isiconloding = false;
 
   String username = '';

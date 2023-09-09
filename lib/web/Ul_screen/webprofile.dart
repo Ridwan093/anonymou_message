@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:anonymouse_messages/common/homepage_widget/custom_container.dart';
 import 'package:anonymouse_messages/web/message_property/viewe_message.dart';
 import 'package:anonymouse_messages/web/message_property/sendMessage_screen/writting_message.dart';
@@ -34,7 +36,6 @@ class Webprofile extends StatefulWidget {
 final TextEditingController emailcontroller = TextEditingController();
 
 class _WebprofileState extends State<Webprofile> {
-  String _platformVersion = 'Unknown';
 
   @override
   void initState() {

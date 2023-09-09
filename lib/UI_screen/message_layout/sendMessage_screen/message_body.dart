@@ -30,6 +30,7 @@ class _MessageBodyState extends State<MessageBody> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance

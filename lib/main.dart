@@ -11,6 +11,8 @@ import 'package:anonymouse_messages/common/liner_forder/linergrant.dart';
 
 import 'package:anonymouse_messages/responsive/screenLayout.dart';
 import 'package:anonymouse_messages/UI_screen/userInfo/userprofile.dart';
+import 'package:anonymouse_messages/responsive/splasscreen.dart';
+
 import 'package:anonymouse_messages/web/Ul_screen/web_auth_screen/web_login.dart';
 
 import 'package:anonymouse_messages/web/Ul_screen/webprofile.dart';
@@ -85,7 +87,8 @@ class _AppRoutState extends State<AppRout> {
                 }
                 if (snapshot.hasData) {
                   return const ScreenLayout(
-                      websreen: Webprofile(), mobilescreen: Userprofile());
+                      websreen: Webprofile(),
+                      mobilescreen: SplashScreen(page: Userprofile()));
                 }
                 // ignore: unnecessary_null_comparison
 
@@ -98,7 +101,8 @@ class _AppRoutState extends State<AppRout> {
                 }
 
                 return const ScreenLayout(
-                    websreen: WebLoggin(), mobilescreen: Loggin());
+                    websreen: WebLoggin(),
+                    mobilescreen: SplashScreen(page: Loggin()));
               })),
     );
   }

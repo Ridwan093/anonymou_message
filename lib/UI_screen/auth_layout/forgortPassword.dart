@@ -1,6 +1,6 @@
-// ignore_for_file: unrelated_type_equality_checks
+// ignore_for_file: unrelated_type_equality_checks, file_names
 
-import 'package:anonymouse_messages/firebase_method/loggin_service/resurcese/auth_method.dart';
+
 import 'package:anonymouse_messages/common/simple_dialog/scalffodsnackbar.dart';
 
 import 'package:anonymouse_messages/firebase_method/loggin_service/textfild.dart';

@@ -1,17 +1,15 @@
-import 'package:anonymouse_messages/UI_screen/auth_layout/sign_up.dart';
+
 import 'package:anonymouse_messages/backEnd_connection/message_buttons/post_message_button.dart';
 import 'package:anonymouse_messages/common/custormise_filed/message_filed.dart';
-import 'package:anonymouse_messages/firebase_method/message_method/Db_helper/DatabaseHelper.dart';
-import 'package:anonymouse_messages/common/simple_dialog/scalffodsnackbar.dart';
 
-import 'package:firebase_auth/firebase_auth.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 import '../../../common/liner_forder/linergrant.dart';
-import '../../userInfo/userprofile.dart';
+
 
 bool islodincontainer = false;
 bool islodinOTP = false;

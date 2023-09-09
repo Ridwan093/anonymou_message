@@ -1,4 +1,4 @@
-// ignore_for_file: dead_code
+// ignore_for_file: dead_code, library_private_types_in_public_api
 
 import 'package:anonymouse_messages/firebase_method/message_method/Db_helper/DatabaseHelper.dart';
 
@@ -122,7 +122,7 @@ class _WebViewitemState extends State<WebViewitem> {
 
   String getTruncatedTitle(String actualString, int maxLetters) {
     return actualString.length > maxLetters
-        ? actualString.substring(0, maxLetters) + "..."
+        ? "${actualString.substring(0, maxLetters)}..."
         : actualString;
   }
 }

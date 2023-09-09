@@ -58,9 +58,9 @@ class Gcontainer {
         diff.inMinutes > 0 && diff.inHours == 0 ||
         diff.inHours > 0 && diff.inDays == 0) {
       if (diff.inHours > 0) {
-        time = diff.inHours.toString() + 'h ago';
+        time = '${diff.inHours}h ago';
       } else if (diff.inMinutes > 0) {
-        time = diff.inMinutes.toString() + 'm ago';
+        time = '${diff.inMinutes}m ago';
       } else if (diff.inSeconds > 0) {
         time = 'now';
       } else if (diff.inMilliseconds > 0) {
@@ -71,11 +71,11 @@ class Gcontainer {
         time = 'now';
       }
     } else if (diff.inDays > 0 && diff.inDays < 7) {
-      time = diff.inDays.toString() + 'd ago';
+      time = '${diff.inDays}d ago';
     } else if (diff.inDays > 6) {
-      time = (diff.inDays / 7).floor().toString() + 'w ago';
+      time = '${(diff.inDays / 7).floor()}w ago';
     } else if (diff.inDays > 29) {
-      time = (diff.inDays / 30).floor().toString() + 'm ago';
+      time = '${(diff.inDays / 30).floor()}m ago';
     } else if (diff.inDays > 365) {
       time = '${date.month} ${date.day}, ${date.year}';
     }

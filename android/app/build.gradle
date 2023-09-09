@@ -32,7 +32,9 @@ apply plugin: 'com.google.gms.google-services'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 33
+    ndkVersion flutter.ndkVersion
+    
 
 
     compileOptions {
@@ -90,7 +92,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.google.firebase:firebase-analytics:17.2.1'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
-    implementation 'com.google.firebase:firebase-storage:17.0.0'
+    // implementation 'com.google.firebase:firebase-storage:17.0.0'
     implementation "androidx.constraintlayout:constraintlayout:2.1.3"
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'com.facebook.android:audience-network-sdk:5.+'

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, must_be_immutable, unrelated_type_equality_checks
+
 import 'package:flutter/material.dart';
 
 import '../common/liner_forder/linergrant.dart';
